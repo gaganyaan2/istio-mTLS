@@ -21,11 +21,12 @@ curl -s http://app2
 ```
 
 ## How to check if the traffic is going via mTLS?
-```
+
 1. Take the console of istio-proxy-1 
 2. curl http://app1 will show "curl: (56) Recv failure: Connection reset by peer"
-3. curl -kv https://app1:80 will show something like below
+3. curl -kv https://app1:80 will show something like below which makes TLS handshake
 
+```
 * TLSv1.3 (IN), TLS handshake, Unknown (8):
 * TLSv1.3 (IN), TLS handshake, Request CERT (13):
 * TLSv1.3 (IN), TLS handshake, Certificate (11):
@@ -60,3 +61,9 @@ curl: (16) SSL_write() returned SYSCALL, errno = 104
 
 1. We can not call service with https as the mTLS is only between istio-sidecar-proxy
 2. We May need to delete pod which don't have the STRICT mTLS
+
+## Reference :
+
+1. https://istiobyexample.dev/mtls
+2. https://istio.io/latest/docs/reference/config/security/peer_authentication/
+3. https://istio.io/latest/docs/reference/config/networking/destination-rule/
