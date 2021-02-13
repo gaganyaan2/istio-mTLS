@@ -67,3 +67,4 @@ curl: (16) SSL_write() returned SYSCALL, errno = 104
 1. https://istiobyexample.dev/mtls
 2. https://istio.io/latest/docs/reference/config/security/peer_authentication/
 3. https://istio.io/latest/docs/reference/config/networking/destination-rule/
+4. https://discuss.istio.io/t/mtls-is-not-working-between-services-istio-1-9-0/9710/8
