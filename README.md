@@ -22,8 +22,8 @@ curl -s http://app2
 ## How to check if the traffic is going via mTLS?
 
 1. Take the console of istio-proxy-1 
-2. curl http://app1 will show "curl: (56) Recv failure: Connection reset by peer"
-3. curl -kv https://app1:80 will show something like below which makes TLS handshake
+2. curl http://app1 will show "curl: (56) Recv failure: Connection reset by peer" means it's NOT able to get the service over http
+3. curl -kv https://app1:80 will show something like below which makes TLS handshake means traffic is going over https
 
 ```
 * TLSv1.3 (IN), TLS handshake, Unknown (8):
