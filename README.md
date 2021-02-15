@@ -11,7 +11,6 @@ kubectl label namespace istio istio-injection=enabled
 
 kubectl -f apps.yml -n istio
 kubectl -f PeerAuthentication.yml -n istio
-kubectl -f DestinationRule.yml -n istio
 ```
 
 ## How to call service from pod?
