@@ -56,6 +56,19 @@ curl: (16) SSL_write() returned SYSCALL, errno = 104
 
 ```
 
+
+## how to take tcpdump?
+
+curl from app1 to app2 whilte runing below tcpdump command on app2 istio sidecar proxy
+
+```
+#on app2 istio sidecar proxy
+kubectl -n istio-test exec -it app2_pod_name -c istio-proxy -- bash
+sudo tcpdump -vvv -A -i etho
+```
+
+
+
 ## Notes :
 
 1. We can not call service with https as the mTLS is only between istio-sidecar-proxy
