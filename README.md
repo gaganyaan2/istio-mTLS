@@ -59,7 +59,7 @@ curl: (16) SSL_write() returned SYSCALL, errno = 104
 
 ## how to take tcpdump?
 
-curl from app1 to app2 whilte runing below tcpdump command on app2 istio sidecar proxy
+curl from app1 to app2 while runing below tcpdump command on app2 istio sidecar proxy
 
 ```
 #on app2 istio sidecar proxy
